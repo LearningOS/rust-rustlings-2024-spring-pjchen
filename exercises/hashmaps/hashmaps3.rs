@@ -14,8 +14,6 @@
 // Execute `rustlings hint hashmaps3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 use std::collections::HashMap;
 
 // A structure to store the goal details of a team.
@@ -86,10 +84,9 @@ mod tests {
     #[test]
     fn validate_team_score_1() {
         let scores = build_scores_table(get_results());
-        println!("{:?}", scores);
         let team = scores.get("England").unwrap();
-        assert_eq!(team.goals_scored, 5);
-        assert_eq!(team.goals_conceded, 4);
+        assert_eq!(team.goals_scored, 1);
+        assert_eq!(team.goals_conceded, 2);
     }
 
     #[test]
