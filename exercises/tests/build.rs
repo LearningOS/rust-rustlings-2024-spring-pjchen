@@ -14,11 +14,14 @@ fn main() {
         "Your command here with {}, please checkout exercises/tests/build.rs",
         timestamp
     );
-    println!("cargo:{}", your_command);
-
+    let command_for_tests7 = format!("rustc-env=TEST_FOO={}", timestamp);
+    println!("cargo:{}", command_for_tests7);
+    
+    
     // In tests8, we should enable "pass" feature to make the
     // testcase return early. Fill in the command to tell
     // Cargo about that.
     let your_command = "Your command here, please checkout exercises/tests/build.rs";
-    println!("cargo:{}", your_command);
+    let command_for_tests8 = "rustc-cfg=feature=\"pass\"";
+    println!("cargo:{}", command_for_tests8);
 }
